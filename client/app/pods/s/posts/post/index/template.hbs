@@ -9,4 +9,5 @@
 	{{/each}}
 </p>
 <p>{{model.body}}</p>
-	{{#link-to 's.posts.post.edit' classNames="btn rb-btn-info"}}edit{{/link-to}}&nbsp;
+	{{#link-to 's.posts.post.edit' classNames="btn rb-btn-info"}}Edit{{/link-to}}&nbsp;
+  <button class="btn rb-btn-info" {{action 'delete' post}}>Delete</button>

@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6 a, ul, li, p, span {
 
 //button styles
 .btn-primary{
-  width:80px;
+  min-width:80px;
   background-color: #97d700;
   border-color: #97d700;
 }
@@ -48,12 +48,7 @@ h1,h2,h3,h4,h5,h6 a, ul, li, p, span {
 
 
 
-.form-control:focus {
-  border-color: #97d700!important;
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(151, 251, 0, .6);
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(151, 251, 0, .6);
-}
+
 /*   box-shadow: inset 0 1px 1px;
 rgba(0,0,0,.075), 0 0 8px
 rgba(151, 251, 0, .6);
@@ -116,6 +111,7 @@ a {
 }
 .logo {
   max-width:50px;
+  margin-bottom:30px;
 }
 .fa-2x {
   font-size: 2em;
@@ -259,16 +255,24 @@ textarea.form-control{
 input {
   background: transparent;
 }
-input.form-control {
+.post-banner input.form-control {
   color:#fff;
   border:none;
 }
 input.form-control-light{
+  padding-top:20%;
   border:none;
   background: transparent;
   color: #fff;
 }
+
 .form-control:focus {
+  border-color: #97d700!important;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(151, 251, 0, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(151, 251, 0, .6);
+}
+.post-form .form-control:focus {
   box-shadow:none;
 }
 .caption {
@@ -277,4 +281,50 @@ input.form-control-light{
 }
 .pad-left {
   padding: 5px 25%;
+}
+.jumbotron {
+  background: transparent;
+}
+.jumbotron h1, .jumbotron p {
+  color:white;
+}
+
+
+.sliding-tab-bar {
+  height: 40px!important;
+  list-style-type: none!important;
+  background-color: #fff!important;
+  border-bottom: solid 1px #dadada!important;
+  padding-left: 10px!important;
+  position: relative!important;
+}
+
+.sliding-tab-bar li {
+  color: #e0e0e0!important;
+  float: left!important;
+  font-size: 1rem!important;
+}
+
+.sliding-tab-bar li a {
+  color: #a6a6a6!important;
+  cursor: pointer!important;
+  display: block!important;
+  font-weight: 600!important;
+  padding: 10px 10px 14px!important;
+  text-decoration: none!important;
+}
+
+.sliding-tab-bar li a.active {
+  color: #3e4142!important;
+  padding-bottom: 10px!important;
+}
+
+.sliding-tab-bar li.tab-highlight {
+  position: absolute!important;
+  bottom: 0px!important;
+  height: 100%!important;
+  border-bottom: solid 4px #f04123!important;
+  -webkit-transition: all 0.45s ease-in-out!important;
+  -moz-transition: all 0.45s ease-in-out!important;
+  transition: all 0.45s ease-in-out!important;
 }

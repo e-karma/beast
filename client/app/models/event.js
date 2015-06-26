@@ -7,6 +7,7 @@ export default DS.Model.extend({
 
     // TODO: add images
     // attributes
+
     title: DS.attr('string'),
     description: DS.attr('string'),
     address: DS.attr('string'),

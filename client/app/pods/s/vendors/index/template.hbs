@@ -1,0 +1,15 @@
+{{#each model as |vendor|}}
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <img src="http://placehold.it/242x200" alt="...">
+      <div class="caption">
+        <h4>{{vendor.title}}</h4>
+        <p>{{vendor.body}}</p>
+      </div>
+      <p class="pad-left">
+        {{#link-to 's.vendors.vendor' vendor.id class="btn btn-primary"}}View{{/link-to}}
+        <button class="btn rb-btn-info" {{action 'delete' vendor}}>delete</button>
+      </p>
+    </div>
+  </div>
+{{/each}}

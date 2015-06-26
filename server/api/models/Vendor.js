@@ -10,44 +10,68 @@ module.exports = {
     attributes: {
 
         // relationships
-        services: {
-            collection: 'service',
-            via: 'vendor'
-        },
-        templates: {
-            collection: 'template',
-            via: 'vendor'
-        },
-        homepages: {
-            model: 'homepage'
-        },
 
         // TODO ideally the user should be many to many with vendor in the future so that different users
         // can be owners of a vendor and admin it
-
         user: {
             model: 'user'
         },
 
+        employees: {
+          model: 'employee'
+        },
+        
+        events: {
+          collection: 'event',
+          via: 'vendor'
+        },
+
         // attributes
         name: {
-            type: 'string'
+            type: 'string',
+            required: true
         },
-        location: {
-            type: 'json'
-        },        
+
         description: {
             type: 'string'
         },
         address: {
             type: 'string'
         },
-        urlSegment: {
+        city: {
             type: 'string'
         },
-        type: {
-            type: 'string'
+        state: {
+            type: 'array'
+        },
+        zip: {
+            type: 'number'
+        },
+        phone: {
+            type: 'number'
+        },
+        email: {
+            type: 'string',
+            required: true
         }
+        // services: {
+        //     collection: 'service',
+        //     via: 'vendor'
+        // },
+        // templates: {
+        //     collection: 'template',
+        //     via: 'vendor'
+        // },
+        // homepages: {
+        //     model: 'homepage'
+        // },
+        // urlSegment: {
+        //     type: 'string'
+        // },
+        // location: {
+        //     type: 'json'
+        // },
+
     }
 
 };

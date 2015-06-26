@@ -34,6 +34,9 @@ module.exports = {
         eventDate: {
             type: 'datetime',
             required: true
+        },
+        tags: {
+          type: 'array'
         }
     }
 };

@@ -32,9 +32,27 @@ export default function () {
   //mktg
   this.transition(
     this.fromRoute('s.mktg.index'),
-    this.toRoute('s.store'),
-    this.use('toUp'),
-    this.reverse('toDown')
+    this.toRoute('s.mktg.content'),
+    this.use('toRight'),
+    this.reverse('toLeft')
+  );
+  this.transition(
+    this.fromRoute('s.mktg.content'),
+    this.toRoute('s.mktg.seo'),
+    this.use('toRight'),
+    this.reverse('toLeft')
+  );
+  this.transition(
+    this.fromRoute('s.mktg.seo'),
+    this.toRoute('s.mktg.branding'),
+    this.use('toRight'),
+    this.reverse('toLeft')
+  );
+  this.transition(
+    this.fromRoute('s.mktg.branding'),
+    this.toRoute('s.mktg.analytics'),
+    this.use('toRight'),
+    this.reverse('toLeft')
   );
   //store
   this.transition(

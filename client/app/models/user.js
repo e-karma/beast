@@ -14,6 +14,8 @@ export default DS.Model.extend({
     inverse: 'likes'
   }),
   events: DS.hasMany('event'),
+  opportunities: DS.hasMany('opportunity'),
+  tasks: DS.hasMany('task'),
 
   // attributes
   firstName: DS.attr('string'),
