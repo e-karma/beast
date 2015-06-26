@@ -1,0 +1,13 @@
+
+<br><br>
+<div class="row">
+	{{#each model as |post|}}
+		{{#link-to 's.posts.post' post.id}}
+		<div class="col-md-3 post">
+			<h4>{{post.title}}</h4>
+			<p>{{post.body}}</p>
+			<button class="btn rb-btn-info" {{action 'delete' post}}>delete</button>
+		</div>
+		{{/link-to}}
+	{{/each}}
+</div>

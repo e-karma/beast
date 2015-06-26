@@ -1,0 +1,13 @@
+
+<br><br>
+<div class="row">
+	{{#each model as |user|}}
+		{{#link-to 's.users.user' user.id}}
+		<div class="col-md-3 post">
+			<h4>{{user.firstName}} {{user.lastName}}</h4>
+		</div>
+		{{/link-to}}
+	{{/each}}
+</div>
+
+{{outlet}}
