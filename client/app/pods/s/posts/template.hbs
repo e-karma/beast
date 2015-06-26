@@ -1,14 +1,13 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-2">
-			<div class="pull-left page-header">
-				{{#link-to 's.posts.create'}}<div class="btn rb-btn-info bump">Create Post</div>{{/link-to}}
 
-        {{#link-to 's.posts.index'}}<div class="btn rb-btn-info bump">View Posts</div>{{/link-to}}
-      </div>
-		</div>
-		<div class="col-md-10">
-			{{outlet}}
-		</div>
+<div class="row">
+	<div class="col-md-2">
+		<div class="pull-left page-header">
+			{{#link-to 's.posts.create'}}<div class="btn rb-btn-info bump">Create Post</div>{{/link-to}}
+
+      {{#link-to 's.posts.index'}}<div class="btn rb-btn-info bump">View Posts</div>{{/link-to}}
+    </div>
+	</div>
+	<div class="col-md-10">
+		{{liquid-outlet}}
 	</div>
 </div>

@@ -1,13 +1,18 @@
 
-<br><br>
 <div class="row">
 	{{#each model as |post|}}
-		{{#link-to 's.posts.post' post.id}}
-		<div class="col-md-3 post">
-			<h4>{{post.title}}</h4>
-			<p>{{post.body}}</p>
-			<button class="btn rb-btn-info" {{action 'delete' post}}>delete</button>
-		</div>
-		{{/link-to}}
-	{{/each}}
+	  <div class="col-md-4">
+	    <div class="thumbnail">
+	      <img src="http://placehold.it/242x200" alt="...">
+	      <div class="caption">
+					<h4>{{post.title}}</h4>
+					<p>{{post.body}}</p>
+	        <p>
+						{{#link-to 's.posts.post' post.id class="btn btn-primary"}}View{{/link-to}}
+						<button class="btn rb-btn-info" {{action 'delete' post}}>delete</button>
+					</p>
+				</div>
+	    </div>
+	  </div>
+  {{/each}}
 </div>

@@ -10,10 +10,10 @@
 {{#if session.isAuthenticated}}
   {{side-nav back='back' forward='forward' invalidateSession='invalidateSession'}}
   <div class="col-md-11 col-md-offset-1">
-    {{outlet}}
-    {{outlet "modal"}}
+    {{liquid-outlet}}
+    {{liquid-outlet "modal"}}
   </div>
 {{else}}
 	  {{! show login panel component}}
-    {{outlet}}
+    {{liquid-outlet}}
 {{/if}}

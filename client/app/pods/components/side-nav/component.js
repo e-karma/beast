@@ -5,18 +5,14 @@ export default Ember.Component.extend({
     'title': 'Dashboard',
     'link': 'index',
     'icon': 'fa-dashboard'
-  }, {
-    'title': 'Posts',
-    'link': 's.posts',
-    'icon': 'fa-file'
-  }, {
-    'title': 'Users',
-    'link': 's.users.index',
-    'icon': 'fa-users'
-  }, {
+  },  {
     'title': 'Marketing',
     'link': 's.mktg',
     'icon': 'fa-bar-chart'
+  }, {
+    'title': 'eStore',
+    'link': 's.store',
+    'icon': 'fa-shopping-cart'
   }, {
     'title': 'CRM',
     'link': 's.vendors',
@@ -25,18 +21,6 @@ export default Ember.Component.extend({
     'title': 'eMail',
     'link': 's.emails',
     'icon': 'fa-envelope'
-  }, {
-    'title': 'Todos',
-    'link': 's.todos',
-    'icon': 'fa-check'
-  }, {
-    'title': 'Settings',
-    'link': 's.settings',
-    'icon': 'fa-cog'
-  }, {
-    'title': 'eCommerce',
-    'link': 's.store',
-    'icon': 'fa-shopping-cart'
   },
   // {
   //   'title': 'Media',
@@ -44,7 +28,15 @@ export default Ember.Component.extend({
   //   'icon': 'fa-laptop'
   // },
   {
-    'title': 'Page Manager',
+    'title': 'Posts',
+    'link': 's.posts',
+    'icon': 'fa-picture-o'
+  }, {
+    'title': 'Todos',
+    'link': 's.todos',
+    'icon': 'fa-check'
+  }, {
+    'title': 'Pages',
     'link': 's.page-manager',
     'icon': 'fa-file',
     'submenu': [{
@@ -64,6 +56,14 @@ export default Ember.Component.extend({
       //         'title': 'Create Homepage',
       //         'link': 's.homepages.create'
       //     }, ]
+  }, {
+    'title': 'Users',
+    'link': 's.users.index',
+    'icon': 'fa-users'
+  }, {
+    'title': 'Settings',
+    'link': 's.settings',
+    'icon': 'fa-cog'
   }],
   actions: {
     invalidateSession() {
