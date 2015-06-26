@@ -20,6 +20,14 @@ Router.map(function() {
             path: "create"
         });
     });
+    this.route("vendors", function() {
+        this.route("vendor", { path: ":vendor_id"}, function(){
+          this.route('edit');
+        });
+        this.route("create", {
+            path: "create"
+        });
+    });
     this.route("mktg", function() {
       this.route('content');
       this.route('seo');
@@ -50,15 +58,7 @@ Router.map(function() {
             path: "create"
         });
     });
-    this.route("vendors", function() {
-        this.route("vendor", {
-            path: ":vendor_id"
-        });
 
-        this.route("create", {
-            path: "create"
-        });
-    });
     this.route("events", function() {
         this.route("event", {
             path: ":event_id"

@@ -1,7 +1,4 @@
 import DS from 'ember-data';
-import Ember from 'ember';
-
-const { computed } = Ember;
 
 export default DS.Model.extend({
     //relationships

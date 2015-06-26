@@ -3,8 +3,14 @@
     <div class="thumbnail">
       <img src="http://placehold.it/242x200" alt="...">
       <div class="caption">
-        <h4>{{vendor.title}}</h4>
-        <p>{{vendor.body}}</p>
+        <h4>{{model.name}}</h4>
+        <p>{{model.description}}</p>
+        <p>{{model.address}}</p>
+        <p>{{model.city}}</p>
+        <p>{{model.state}}</p>
+        <p>{{model.zip}}</p>
+        <p>{{model.phone}}</p>
+        <p>{{model.email}}</p>
       </div>
       <p class="pad-left">
         {{#link-to 's.vendors.vendor' vendor.id class="btn btn-primary"}}View{{/link-to}}

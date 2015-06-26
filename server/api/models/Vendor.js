@@ -20,11 +20,11 @@ module.exports = {
         employees: {
           model: 'employee'
         },
-        
-        events: {
-          collection: 'event',
-          via: 'vendor'
-        },
+
+        // events: {
+        //   collection: 'event',
+        //   via: 'vendor'
+        // },
 
         // attributes
         name: {

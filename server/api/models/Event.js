@@ -9,9 +9,9 @@
 module.exports = {
 
     attributes: {
-        vendor: {
-            model: 'vendor'
-        },
+        // vendor: {
+        //     model: 'vendor'
+        // },
 
         users: {
             collection: 'user',
