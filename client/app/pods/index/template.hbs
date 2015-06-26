@@ -1,18 +1,11 @@
 {{#if session.isAuthenticated}}
-  <br><br>
-<p> Welcome, {{session.user.firstName}} {{session.user.lastName}}</p>
-<div class="row">
-  <div class="col-md-12">
-    <!-- {{#each model as |post|}}
-      <h4>{{#link-to 's.posts.post' post.id}}{{post.title}}{{/link-to}}</h4>
-      <p>{{post.body}}</p>
-    {{/each}} -->
-    {{#each posts as |post|}}
-    <h1>{{model.title}}</h1>
-    {{/each}}
-  </div>
-</div>
+    <br><br>
+  <p> Welcome, {{session.user.firstName}} {{session.user.lastName}}</p>
+  <div class="row">
+    <div class="col-md-12">
 
+    </div>
+  </div>
 {{else}}
   {{landing-page}}
 {{/if}}

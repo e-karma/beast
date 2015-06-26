@@ -39,4 +39,15 @@ export default Ember.Component.extend({
       //         'link': 's.homepages.create'
       //     }, ]
   }],
+  actions: {
+    invalidateSession() {
+      this.sendAction('invalidateSession');
+    },
+    back() {
+      this.sendAction('back');
+    },
+    forward() {
+      this.sendAction('forward');
+    }
+  }
 });
