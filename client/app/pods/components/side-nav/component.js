@@ -6,18 +6,44 @@ export default Ember.Component.extend({
     'link': 'index',
     'icon': 'fa-dashboard'
   }, {
-    'title': 'Media',
-    'link': 's.media',
-    'icon': 'fa-laptop'
-  }, {
     'title': 'Posts',
     'link': 's.posts',
-    'icon': 'fa-folder-open'
+    'icon': 'fa-file'
   }, {
     'title': 'Users',
     'link': 's.users.index',
-    'icon': 'fa-bar-chart-o'
+    'icon': 'fa-users'
   }, {
+    'title': 'Marketing',
+    'link': 's.mktg',
+    'icon': 'fa-bar-chart'
+  }, {
+    'title': 'CRM',
+    'link': 's.vendors',
+    'icon': 'fa-folder-open'
+  }, {
+    'title': 'eMail',
+    'link': 's.emails',
+    'icon': 'fa-envelope'
+  }, {
+    'title': 'Todos',
+    'link': 's.todos',
+    'icon': 'fa-check'
+  }, {
+    'title': 'Settings',
+    'link': 's.settings',
+    'icon': 'fa-cog'
+  }, {
+    'title': 'eCommerce',
+    'link': 's.store',
+    'icon': 'fa-shopping-cart'
+  },
+  // {
+  //   'title': 'Media',
+  //   'link': 's.media',
+  //   'icon': 'fa-laptop'
+  // },
+  {
     'title': 'Page Manager',
     'link': 's.page-manager',
     'icon': 'fa-file',

@@ -109,6 +109,29 @@ Router.map(function() {
           path: '/edit/:page_id'
         });
       });
+      this.route("mktg", function() {
+
+      });
+      this.route("emails", function() {
+          this.route("email", {
+              path: ":email_id"
+          });
+
+          this.route("create", {
+              path: "create"
+          });
+      });
+      this.route("todos", function() {
+          this.route("todo", {
+              path: ":todo_id"
+          });
+
+          this.route("create", {
+              path: "create"
+          });
+      });
+      this.route("settings");
+      this.route('store');
     });
 
 
