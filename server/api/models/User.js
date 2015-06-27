@@ -17,6 +17,10 @@ module.exports = {
             collection: 'post',
             via: 'user'
         },
+        todos: {
+            collection: 'todo',
+            via: 'user'
+        },
         vendors: {
             collection: 'vendor',
             via: 'user'

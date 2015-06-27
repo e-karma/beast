@@ -1,6 +1,21 @@
+
 <div class="row">
-		{{#link-to 's.posts.create'}}<div class="btn rb-btn-info">Create Post</div>{{/link-to}}
-		{{#link-to 's.posts.index'}}<div class="btn rb-btn-info">View Posts</div>{{/link-to}}
+	<div class="col-md-3">
+			<div class="list-group">
+				{{#each model as |post|}}
+
+			  {{#link-to 's.posts.post' post.id class="list-group-item"}}
+			    <h4 class="list-group-item-heading">{{post.title}}</h4>
+			    <p class="list-group-item-text">{{post.body}}</p>
+			  {{/link-to}}
+				{{/each}}
+
+			</div>
+	</div>
+	<div class="col-md-9">
+
+	</div>
+
 </div>
 <div class="row">
 	{{#each model as |post|}}
@@ -19,3 +34,5 @@
 	  </div>
   {{/each}}
 </div>
+{{#link-to 's.posts.create'}}<div class="btn rb-btn-info">Create Post</div>{{/link-to}}
+{{#link-to 's.posts.index'}}<div class="btn rb-btn-info">View Posts</div>{{/link-to}}

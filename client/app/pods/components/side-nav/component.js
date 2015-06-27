@@ -9,19 +9,22 @@ export default Ember.Component.extend({
     'title': 'Marketing',
     'link': 's.mktg',
     'icon': 'fa-bar-chart'
-  }, {
-    'title': 'eStore',
-    'link': 's.store',
-    'icon': 'fa-shopping-cart'
-  }, {
+  },
+  // {
+  //   'title': 'eStore',
+  //   'link': 's.store',
+  //   'icon': 'fa-shopping-cart'
+  // },
+  {
     'title': 'CRM',
     'link': 's.vendors',
     'icon': 'fa-folder-open'
-  }, {
-    'title': 'eMail',
-    'link': 's.emails',
-    'icon': 'fa-envelope'
   },
+  // {
+  //   'title': 'eMail',
+  //   'link': 's.emails',
+  //   'icon': 'fa-envelope'
+  // },
   // {
   //   'title': 'Media',
   //   'link': 's.media',
@@ -31,11 +34,13 @@ export default Ember.Component.extend({
     'title': 'Posts',
     'link': 's.posts',
     'icon': 'fa-picture-o'
-  }, {
+  },
+  {
     'title': 'Todos',
     'link': 's.todos',
     'icon': 'fa-check'
-  }, {
+  },
+  {
     'title': 'Pages',
     'link': 's.page-manager',
     'icon': 'fa-file',
@@ -60,11 +65,13 @@ export default Ember.Component.extend({
     'title': 'Users',
     'link': 's.users.index',
     'icon': 'fa-users'
-  }, {
-    'title': 'Settings',
-    'link': 's.settings',
-    'icon': 'fa-cog'
-  }],
+  },
+  // {
+  //   'title': 'Settings',
+  //   'link': 's.settings',
+  //   'icon': 'fa-cog'
+  // }
+  ],
   actions: {
     invalidateSession() {
       this.sendAction('invalidateSession');

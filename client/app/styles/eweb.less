@@ -26,8 +26,11 @@ h1,h2,h3,h4,h5,h6 a, ul, li, p, span {
 }
 .btn-primary:hover {
   background-color:transparent;
-  color: #151515;
+  color: white;
   border-color:#97d700;
+}
+.btn-primary:focus {
+  background: #97d700;
 }
 .rb-btn-info, .rb-btn-info:active, .btn-info:focus {
   min-width:80px;
@@ -276,7 +279,7 @@ input.form-control-light{
   box-shadow:none;
 }
 .caption {
-  max-height:150px;
+  height:auto;
   overflow:hidden;
 }
 .pad-left {
@@ -288,7 +291,7 @@ input.form-control-light{
 .jumbotron h1, .jumbotron p {
   color:white;
 }
-
+/*
 
 .sliding-tab-bar {
   height: 40px!important;
@@ -328,3 +331,9 @@ input.form-control-light{
   -moz-transition: all 0.45s ease-in-out!important;
   transition: all 0.45s ease-in-out!important;
 }
+ */
+
+ .list-group-item {
+   max-height:82px;
+   overflow:hidden;
+ }

@@ -35,6 +35,9 @@ module.exports = {
         description: {
             type: 'string'
         },
+        phone: {
+            type: 'string'
+        },
         address: {
             type: 'string'
         },
@@ -47,9 +50,7 @@ module.exports = {
         zip: {
             type: 'number'
         },
-        phone: {
-            type: 'number'
-        },
+
         email: {
             type: 'string',
             required: true

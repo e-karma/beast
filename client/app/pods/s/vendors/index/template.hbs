@@ -1,21 +1,47 @@
-{{#each model as |vendor|}}
+<div class="col-md-9">
+  <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><h4>My Accounts</h4></div>
+
+  <!-- Table -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>State</th>
+        <th>Ph #</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |vendor|}}
+          <tr>
+            <th>{{#link-to 's.vendors.vendor' vendor.id }}{{vendor.name}}  {{/link-to}}</th>
+            <th><th><p>{{vendor.state}}</p></th></th>
+            <th></th>
+            <th></th>
+          </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+</div>
+
   <div class="col-md-4">
     <div class="thumbnail">
       <img src="http://placehold.it/242x200" alt="...">
       <div class="caption">
-        <h4>{{model.name}}</h4>
-        <p>{{model.description}}</p>
-        <p>{{model.address}}</p>
-        <p>{{model.city}}</p>
-        <p>{{model.state}}</p>
-        <p>{{model.zip}}</p>
-        <p>{{model.phone}}</p>
-        <p>{{model.email}}</p>
+        <p>{{vendor.description}}</p>
+        <p>{{vendor.address}}</p>
+        <p>{{vendor.city}}</p>
+
+        <!-- <p>{{vendor.zip}}</p>
+        <p>{{vendor.phone}}</p>
+        <p>{{vendor.email}}</p> -->
       </div>
       <p class="pad-left">
-        {{#link-to 's.vendors.vendor' vendor.id class="btn btn-primary"}}View{{/link-to}}
+
         <button class="btn rb-btn-info" {{action 'delete' vendor}}>delete</button>
       </p>
     </div>
   </div>
-{{/each}}

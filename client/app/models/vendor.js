@@ -12,12 +12,13 @@ export default DS.Model.extend({
     // attr
     name: DS.attr('string'),
     description: DS.attr('string'),
+    phone: DS.attr('string'),
+    email: DS.attr('string'),
     address: DS.attr('string'),
     city: DS.attr('string'),
     state: DS.attr('array'),
-    zip: DS.attr('number'),
-    phone: DS.attr('number'),
-    email: DS.attr('string')
+    zip: DS.attr('number')
+
     // urlSegment: DS.attr('string'),
     // location: DS.attr(),
 

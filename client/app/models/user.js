@@ -10,6 +10,7 @@ export default DS.Model.extend({
   photos: DS.hasMany('photo'),
   albums: DS.hasMany('album'),
   posts: DS.hasMany('post'),
+  todos: DS.hasMany('todo'),
   statuses: DS.hasMany('status', {
     inverse: 'likes'
   }),
