@@ -62,7 +62,7 @@ Router.map(function() {
     this.route("events", function() {
         this.route("event", {
             path: ":event_id"
-        });
+        }, function() {});
 
         this.route("create", {
             path: "create"

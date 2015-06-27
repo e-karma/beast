@@ -1,0 +1,55 @@
+{{outlet}}
+<div class="container">
+	<div class="page-header pull-left">
+        <h2>Events</h2>
+    </div>
+	<div class="pull-right page-header">
+        {{#link-to 's.events.create'}}
+            <button class="btn btn-info bump">Create Event</button>
+        {{/link-to}}
+	</div>
+	<div class="clear">
+        {{#each model as |event|}}
+            {{event-card event=event}}
+        {{/each}}
+	</div>
+</div>
+
+<!--
+<div class="row">
+	<div class="col-md-3">
+			<div class="list-group">
+				{{#each model as |event|}}
+
+			  {{#link-to 's.events.event' event.id class="list-group-item"}}
+			    <h4 class="list-group-item-heading">{{event.title}}</h4>
+			    <p class="list-group-item-text">{{event.body}}</p>
+			  {{/link-to}}
+				{{/each}}
+
+			</div>
+	</div>
+	<div class="col-md-9">
+
+	</div>
+
+</div>
+<div class="row">
+	{{#each model as |event|}}
+	  <div class="col-md-4">
+	    <div class="thumbnail">
+	      <img src="http://placehold.it/242x200" alt="...">
+	      <div class="caption">
+					<h4>{{event.title}}</h4>
+					<p>{{event.body}}</p>
+				</div>
+				<p class="pad-left">
+					{{#link-to 's.events.event' event.id class="btn btn-primary"}}View{{/link-to}}
+					<button class="btn rb-btn-info" {{action 'delete' event}}>delete</button>
+				</p>
+	    </div>
+	  </div>
+  {{/each}}
+</div>
+{{#link-to 's.events.create'}}<div class="btn rb-btn-info">Create Event</div>{{/link-to}}
+{{#link-to 's.events.index'}}<div class="btn rb-btn-info">View Events</div>{{/link-to}} -->

@@ -6,8 +6,8 @@ import {
 } from 'ember-mocha';
 
 describeModule(
-  'route:s/events',
-  'SEventsRoute',
+  'route:s/events/event/index',
+  'SEventsEventIndexRoute',
   {
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']
