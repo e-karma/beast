@@ -7,16 +7,13 @@ export default Ember.Route.extend(DestroyNew, {
     },
 
     actions: {
-        createEvent(model) {
-            var userId = this.session.get('user.id');
-            this.store.find('vendor', {user: userId} ).then(result => {
-
-                model.set('vendor', result.get('content')[0]);
-                // model.set('tags', ['lifestyle', 'health', 'tech']);
-
-                return model.save();
-            }).then(event => this.transitionTo('s.events.event', event));
-
-        }
+      createEvent(model) {
+          // model.set('tags', ['lifestyle', 'health', 'tech']);
+          var userId = this.session.get('user.id');
+          this.store.findRecord('user', userId).then(result => {
+              model.set('user', result);
+              return model.save();
+          }).then(post => this.transitionTo('s.events.event', event));
+      }
     }
 });

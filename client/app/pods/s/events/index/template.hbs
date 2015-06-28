@@ -9,12 +9,14 @@
         {{/link-to}}
 	</div>
 	<div class="clear">
-        {{#each model as |event|}}
+        <!-- {{#each model as |event|}}
             {{event-card event=event}}
-        {{/each}}
+        {{/each}} -->
 	</div>
 </div>
-
+{{#each model as |vendor|}}
+	{{vendor.name}}
+{{/each}}
 <!--
 <div class="row">
 	<div class="col-md-3">
