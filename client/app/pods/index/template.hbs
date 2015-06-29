@@ -1,21 +1,50 @@
 {{#if session.isAuthenticated}}
 <div class="column-1">
   {{#each model.posts as |post|}}
-    {{#hex-wrap}}
-    <label>Title</label>{{post.title}}
-    {{/hex-wrap}}
+    <div class="flex-item">
+        <label>Title</label>{{post.title}}
+    </div>
   {{/each}}
 </div>
 <div class="column-2">
-  {{#each model.pages as |pages|}}
-    {{#hex-wrap}}
+  {{#each model.pages as |page|}}
+    <div class="flex-item">
       <label>Name</label>{{pages.name}}
-    {{/hex-wrap}}
+    </div>
   {{/each}}
 </div>
-
-
-
+<div class="column-1">
+  {{#each model.posts as |event|}}
+    <div class="flex-item">
+        <label>Title</label>{{post.title}}
+    </div>
+  {{/each}}
+</div>
+<div class="column-2">
+  {{#each model.pages as |opportunity|}}
+    <div class="flex-item">
+      <label>Name</label>{{pages.name}}
+    </div>
+  {{/each}}
+</div>
+<div class="column-1">
+  {{#each model.posts as |email|}}
+    <div class="flex-item">
+        <label>Title</label>{{post.title}}
+    </div>
+  {{/each}}
+</div>
+<div class="column-2">
+  {{#each model.pages as |estore|}}
+    <div class="flex-item">
+      <label>Name</label>{{pages.name}}
+    </div>
+  {{/each}}
+</div>
+<!-- {{#hex-wrap}}
+{{/hex-wrap}}
+{{#hex-wrap}}
+{{/hex-wrap}} -->
       <!-- <div class="column-2">
         {{#each model as |page|}}
           {{#hex-wrap}}

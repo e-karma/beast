@@ -42,7 +42,14 @@ module.exports = {
             collection: 'event',
             via: 'users'
         },
-
+        emails: {
+            collection: 'email',
+            via: 'users'
+        },
+        settings: {
+            collection: 'setting',
+            via: 'users'
+        },
         // attributes
         firstName: 'STRING',
         lastName: 'STRING',

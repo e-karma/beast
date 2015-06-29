@@ -15,6 +15,7 @@ export default DS.Model.extend({
     inverse: 'likes'
   }),
   events: DS.hasMany('event'),
+  emails: DS.hasMany('email'),
   opportunities: DS.hasMany('opportunity'),
   tasks: DS.hasMany('task'),
 

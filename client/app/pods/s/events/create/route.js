@@ -15,7 +15,7 @@ export default Ember.Route.extend(DestroyNew, {
       createEvent(model) {
           // var userId = this.session.get('user.id');
           var vendor = this.session.get('vendor');
-          this.session.get('event', vendor).then(result => {
+          var event = this.session.get('event', vendor).then(result => {
               model.set('event', result);
               return model.save();
           }).then(event => this.transitionTo('s.events.event', event));
