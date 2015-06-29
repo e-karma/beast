@@ -1,16 +1,33 @@
-<ul>
-	{{#each model as |event|}}
-	<li class="hexagon">
-		{{event.title}}
-	</li>
-	{{/each}}
-</ul>
-	<div class="flex-container center">
-        {{#link-to 's.events.create'}}
-            <button class="btn btn-info bump">Create Event</button>
-        {{/link-to}}
-	</div>
+	
+	<div class="col-md-9">
+	  <div class="panel panel-default">
+	  <!-- Default panel contents -->
+	  <div class="panel-heading"><h4>My Accounts</h4></div>
 
+	  <!-- Table -->
+	  <table class="table">
+	    <thead>
+	      <tr>
+	        <th>Company</th>
+	        <th>State</th>
+	        <th>Ph #</th>
+	        <th>Email</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      {{#each model as |event|}}
+	          <tr>
+	            <th>{{#link-to 's.events.event' event.id }}{{event.title}}  {{/link-to}}</th>
+	            <th><th><p>{{event.description}}</p></th></th>
+	            <th></th>
+	            <th></th>
+	            <th><button class="btn rb-btn-info" {{action 'delete' event}}>delete</button></th>
+	          </tr>
+	      {{/each}}
+	    </tbody>
+	  </table>
+	</div>
+	</div>
 
 <!--
 <div class="row">

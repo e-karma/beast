@@ -1,13 +1,15 @@
 
-<br><br>
 <div class="row">
 	{{#each model as |user|}}
-		{{#link-to 's.users.user' user.id}}
-		<div class="col-md-3 post">
-			<h4>{{user.firstName}} {{user.lastName}}</h4>
+	{{#link-to 's.users.user' user.id}}
+	<div class="flex-item">
+		<div class="flex-top"></div>
+		<div class="flex-body">
+				<h4>{{user.firstName}} {{user.lastName}}</h4>
+				<p>Stuff goes here</p>
 		</div>
-		{{/link-to}}
+		<div class="flex-bottom"></div>
+	</div>
+	{{/link-to}}
 	{{/each}}
 </div>
-
-{{outlet}}

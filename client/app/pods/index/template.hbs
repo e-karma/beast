@@ -1,43 +1,80 @@
 {{#if session.isAuthenticated}}
 <div class="column-1">
+    <div class="flex-item">
+      <div class="flex-body">
+      </div>
+    </div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+</div>
+<div class="column-2">
   {{#each model.posts as |post|}}
     <div class="flex-item">
-        <label>Title</label>{{post.title}}
+      <div class="flex-top"></div>
+      <div class="flex-body">
+          <h3>{{post.title}}</h3><br>
+          <p>{{post.body}}</p>
+      </div>
+      <div class="flex-bottom"></div>
     </div>
   {{/each}}
 </div>
-<div class="column-2">
+<div class="column-1">
   {{#each model.pages as |page|}}
     <div class="flex-item">
-      <label>Name</label>{{pages.name}}
-    </div>
-  {{/each}}
-</div>
-<div class="column-1">
-  {{#each model.posts as |event|}}
-    <div class="flex-item">
-        <label>Title</label>{{post.title}}
-    </div>
-  {{/each}}
-</div>
-<div class="column-2">
-  {{#each model.pages as |opportunity|}}
-    <div class="flex-item">
-      <label>Name</label>{{pages.name}}
-    </div>
-  {{/each}}
-</div>
-<div class="column-1">
-  {{#each model.posts as |email|}}
-    <div class="flex-item">
-        <label>Title</label>{{post.title}}
+      <div class="flex-top"><h4>page</h4></div>
+      <div class="flex-body">
+        <h3>{{page.name}}</h3>
+        <p>{{page.title}}</p>
+      </div>
+      <div class="flex-bottom"></div>
+
     </div>
   {{/each}}
 </div>
 <div class="column-2">
+  {{#each model.events as |event|}}
+      <div class="flex-item">
+        <div class="flex-top"></div>
+        <div class="flex-body">
+          <h3>{{event.title}}</h3>
+        </div>
+        <div class="flex-bottom"></div>
+
+      </div>
+  {{/each}}
+</div>
+<div class="column-1">
+  {{#each model.opportunity as |opportunity|}}
+    <div class="flex-item">
+      <div class="flex-top"></div>
+      <div class="flex-body">
+        <h3>{{opportunity.name}}</h3>
+      </div>
+      <div class="flex-bottom"></div>
+    </div>
+  {{/each}}
+</div>
+<div class="column-2">
+  {{#each model.todos as |todo|}}
+    <div class="flex-item">
+      <div class="flex-top"></div>
+      <div class="flex-body">
+        <h3>{{todo.title}}</h3>
+      </div>
+      <div class="flex-bottom"></div>
+    </div>
+  {{/each}}
+</div>
+<div class="column-1">
   {{#each model.pages as |estore|}}
     <div class="flex-item">
-      <label>Name</label>{{pages.name}}
+      <div class="flex-top"></div>
+      <div class="flex-body">
+        <h3>{{pages.name}}</h3>
+      </div>
+      <div class="flex-bottom"></div>
     </div>
   {{/each}}
 </div>
