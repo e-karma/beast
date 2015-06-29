@@ -3,6 +3,7 @@ import DestroyNew from 'client/mixins/destroy-new-model';
 
 export default Ember.Route.extend(DestroyNew, {
     model() {
+        return this.store.findAll('vendor');
         return this.store.createRecord('event');
     },
 

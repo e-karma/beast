@@ -1,4 +1,12 @@
-
+{{#each model as |post|}}
+	<div class="hexagon">
+	<!-- <li class="flex-item"> -->
+		<h4>{{post.title}}</h4>
+		<p><span class="run-in">First Few Words</span>{{post.body}}</p>
+	<!-- </li> -->
+	</div>
+{{/each}}
+<!--
 <div class="row">
 	<div class="col-md-3">
 			<div class="list-group">
@@ -16,15 +24,15 @@
 
 	</div>
 
-</div>
-<div class="row">
+</div> -->
+<!-- <div class="row">
 	{{#each model as |post|}}
 	  <div class="col-md-4">
 	    <div class="thumbnail">
 	      <img src="http://placehold.it/242x200" alt="...">
 	      <div class="caption">
 					<h4>{{post.title}}</h4>
-					<p>{{post.body}}</p>
+					<p><span class="run-in">First Few Words</span>{{post.body}}</p>
 				</div>
 				<p class="pad-left">
 					{{#link-to 's.posts.post' post.id class="btn btn-primary"}}View{{/link-to}}
@@ -33,6 +41,11 @@
 	    </div>
 	  </div>
   {{/each}}
-</div>
+</div> -->
+
+<!-- <ul class="flex-container row"> -->
+
+<!-- </ul> -->
+
 {{#link-to 's.posts.create'}}<div class="btn rb-btn-info">Create Post</div>{{/link-to}}
 {{#link-to 's.posts.index'}}<div class="btn rb-btn-info">View Posts</div>{{/link-to}}

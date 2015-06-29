@@ -5,7 +5,15 @@
         <h2>Create Event</h2>
     </div>
 	<form {{action 'createEvent' on='submit'}}>
-	    <div class="form-group">
+			<div class="form-group">
+				<select>
+				{{#each model as |vendor|}}
+					<option>{{vendor.name}}</option>
+					<!-- <option value={{vendor.name}}>{{vendor.name}}</option> -->
+					{{/each}}
+				</select>
+			</div>
+			<div class="form-group">
 	        <label for="title">Title</label>
 	        {{input type="text" id="title" value=title class='form-control' autofocus=true}}
 	    </div>
@@ -24,3 +32,4 @@
 	    <button class="btn btn-default" {{action 'createEvent' model}}>Create Event</button>
 	</form>
 </div>
+<!-- {{input type="text" id="title" value=title class='form-control' autofocus=true}} -->

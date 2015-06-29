@@ -2,6 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model() {
-        return this.store.findAll('vendor', 'event');
+        return this.store.findAll('event');
     }
 });
