@@ -8,13 +8,17 @@ export default Ember.Route.extend(DestroyNew, {
     },
 
     actions: {
+      selectVendor(vendor){
+        this.set('selectedVendor', vendor);
+        // this.event.set('event', vendor);
+      },
       createEvent(model) {
-          // model.set('tags', ['lifestyle', 'health', 'tech']);
-          var userId = this.session.get('user.id');
-          this.store.findRecord('user', userId).then(result => {
-              model.set('user', result);
+          // var userId = this.session.get('user.id');
+          var vendor = this.session.get('vendor');
+          this.session.get('event', vendor).then(result => {
+              model.set('event', result);
               return model.save();
-          }).then(post => this.transitionTo('s.events.event', event));
+          }).then(event => this.transitionTo('s.events.event', event));
       }
     }
 });

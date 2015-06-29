@@ -6,10 +6,10 @@ export default Ember.Route.extend(DestroyNew, {
         return this.store.createRecord('vendor');
     },
     actions: {
+
         createVendor(model) {
-            // model.set('tags', ['lifestyle', 'health', 'tech']);
             var userId = this.session.get('user.id');
-            this.store.find('user', userId).then(result => {
+            this.store.findRecord('user', userId).then(result => {
                 model.set('user', result);
                 return model.save();
             }).then(vendor => this.transitionTo('s.vendors.vendor', vendor));
